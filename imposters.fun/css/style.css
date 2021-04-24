@@ -1,0 +1,366 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+.container{
+	margin: 0 0;
+	width: 100%;
+}
+@media(max-width: 689px) {
+	.container {
+		max-width: 689px;
+	}
+}
+.bg{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 55%;
+	height: 820px;
+	background-image:url(../img/astronaut.png);
+	background-position: top left;
+	background-repeat: no-repeat;
+	z-index: -5;
+}
+@media (min-width: 1440px) {
+	.bg{
+		width: 793px;
+	}
+}
+.soplya{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 95%;
+	height: 966px;
+	background-image: url(../img/background.png);
+	background-repeat: no-repeat;
+	z-index: -10;
+}
+img[alt="planet"]{
+	position: absolute;
+	top: 0;
+	left: 16%;
+	width: 70%;
+	z-index: -5;
+}
+img[alt="logo-mobile"]{
+	position: absolute;
+	top: 0;
+	left: 35%;
+	width: 30%;
+	z-index: 5;
+}
+.bg2{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/bg_mobile.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	z-index: -10;
+}
+.astro2{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-top: 5%;
+	width: 60%;
+	height: 100%;
+	background-image:url(../img/astronaut2.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+@media(max-width: 510px){
+	.astro2{
+		margin-top: 10%;
+		width: 57%;
+	}
+}
+.top-part{
+	margin-left: 10%;
+	font-size: 15px;
+}
+@media(max-width: 689px) {
+	.top-part {
+		flex-direction: column;
+		margin-top: 21%;
+		margin-left: 10%;
+	}
+}
+img[alt="logo"]{
+	width: 157px;
+	height: 79px;
+	margin-right: 32px
+}
+.header{
+	width: 44.5%;
+	display: flex;
+	align-items: center;
+	padding-top: 5px;
+	z-index: 10;
+}
+.nav{
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+	width: 473px;
+	padding-left: 0;
+	padding-bottom: 8px;
+}
+.nav > li > a{
+	text-decoration: none;
+	color: #4f4f4f;
+}
+.nav > li{
+	margin-left: 5px;
+	margin-right: 5px;
+	text-align: center;
+	width: 64px;
+}
+.about-team{
+	margin-top: 120px;
+	width: calc(400px + 125 * ((100vw - 689px) / (1440 - 689)));
+	font-size: calc(35px + (5 + 5 * 0.7) * ((100vw - 689px) / (1440 - 689)));
+	line-height: 47px;
+	color: #333;
+}
+@media(max-width: 689px) {
+	.about-team {
+		margin-top: calc(0px + 134 * ((100vw - 320px) / (689 - 320)));
+		width: 55%;
+		font-size: calc(14px + (8 + 8 * 0.7) * ((100vw - 320px) / (689 - 320)));
+		line-height: 1.5em;
+		color: #ffffff;
+	}
+}
+.about-team2{
+	width: 500px;
+	margin-top: 2%;
+	line-height: 25px;
+	color: #4f4f4f;
+}
+.buttons{
+	display: flex;
+	max-width: 300px;
+	width: 45%;
+	margin-top: 4%;
+	justify-content: space-between;
+}
+.buttons > a{
+	text-decoration: none;
+	color: #fff;
+	background-color: #8829B5;
+	border-radius: 23px;
+	z-index: 5;
+}
+a[href="/"]{
+	padding: 12px 30px;
+}
+a[href="#"] {
+	padding: 12px 30px;
+	background-color: #FFA41D;
+}
+.buttons > a:hover{
+	background-color: #69188F;
+}
+a[href="#"]:hover{
+	background-color: #F97C14;
+}
+@media(max-width: 689px){
+	.buttons{
+		width: 50%;
+		margin-top: 2%;
+	}
+	.buttons > a{
+		box-sizing: border-box;
+		text-align: center;
+		font-size: calc(10px + 5 * ((100vw - 320px) / (689 - 320)));
+		padding: calc(7px + 5 * ((100vw - 320px) / (689 - 320))) calc(18px + 12 * ((100vw - 320px) / (689 - 320)));
+	}
+}
+img[alt="planet1"]{
+	margin: -10px 0;
+	height: 550px;
+	width: 250px;
+	background-image: url(../img/planet2.png);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+@media(min-width: 689px){
+	.bg2, .astro2, img[alt="logo-mobile"], img[alt="planet"]{
+		display: none;
+	}
+}
+@media(max-width: 689px){
+	.bg, .soplya, .header, .about-team2, img[alt="planet1"], a[href="/"]{
+		display: none;
+	}
+}
+.technology-stack{
+	align-items: center;
+	margin-top: -90px;
+}
+@media (max-width: 689px) {
+	.technology-stack{
+		margin-top: calc(97px + 73 * ((100vw - 320px) / (689 - 320)));
+	}
+}
+.note{
+	margin: auto;
+	font-size: 15px;
+	color: #828282;
+	width: 320px;
+	text-align: center;
+}
+.note > h1{
+	font-size: calc(35px + (5 + 5 * 0.7) * ((100vw - 689px) / (1440 - 689)));
+	font-weight: normal;
+	color: #333333;
+	margin-bottom: 24px;
+}
+@media (max-width: 689px){
+	.note > h1{
+		font-size: calc(14px + (8 + 8 * 0.7) * ((100vw - 320px) / (689 - 320)));
+	}
+}
+.word{
+	color: #69188F;
+}
+.skills{
+	display: flex;
+	justify-content: space-around;
+	margin-top: calc(22px + 23 * ((100vw - 320px) / (1440 - 320)));
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: center;
+}
+@media (max-width: 769px) {
+	.skills {
+		flex-direction: column;
+	}
+}
+img[alt="go"]{
+	width: calc(69px + 54 * ((100vw - 320px) / (1440 - 320)));
+	height: calc(62px + 47 * ((100vw - 320px) / (1440 - 320)));
+	margin-bottom: calc(8px + 2 * ((100vw - 320px) / (1440 - 320)));
+}
+img[alt="react"], img[alt="student"]{
+	width: calc(62px + 46 * ((100vw - 320px) / (1440 - 320)));
+	height: calc(69px + 52 * ((100vw - 320px) / (1440 - 320)));
+}
+.go-text, .react-text, .student-text{
+	width: calc(105px + 215 * ((100vw - 320px) / (1440 - 320)));
+	margin: calc(20px + 24 * ((100vw - 320px) / (1440 - 320))) auto;
+}
+.go-text > h3, .react-text > h3, .student-text > h3{
+	padding: 10px 20px;
+	font-size: calc(12px + 3 * ((100vw - 320px)/(1440 - 320)));
+	color: #4f4f4f;
+}
+.go-text > p, .react-text > p, .student-text > p{
+	font-size: calc(11px + 2 * ((100vw - 320px)/(1440 - 320)));
+	padding: calc(1em + 2 * ((100vw - 320px) / (1440 - 320)));
+	color: #828282;
+}
+@media (max-width: 689px) {
+	.note > p{
+		display: none;
+	}
+}
+.our-projects{
+	margin-top: calc(30px + 60 * ((100vw - 320px) / (1440 - 320)));
+	padding: 40px calc(7% + 5 * ((100vw - 689px) / (1440 - 689)));
+	background-image: url(../img/bg_projects.png);
+	background-size: 100%;
+}
+.our-projects > h1{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: calc(35px + (5 + 5 * 0.7) * ((100vw - 689px) / (1440 - 689)));
+	font-weight: normal;
+	text-align: center;
+	color: #fff;
+	margin-bottom: calc(15px + 45 * ((100vw - 320px) / (1440 - 320)));
+}
+@media (max-width: 689px){
+	.our-projects > h1{
+		font-size: calc(14px + (8 + 8 * 0.7) * ((100vw - 320px) / (689 - 320)));
+	}
+}
+.projects{
+	display: flex;
+	justify-content: space-around;
+}
+img[alt="img-pr1"]{
+	width: calc(190px + 100 * ((100vw - 689px) / (1440 - 689)));
+}
+.pr1-text, .pr2-text, .pr3-text{
+	margin-top: -5px;
+	width: calc(190px + 100 * ((100vw - 689px) / (1440 - 689)));
+	background-color: #F3F6F8;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.pr1-text > h3, .pr2-text > h3, .pr3-text > h3{
+	padding: 1.5em;
+	font-size: calc(12px + 3 * ((100vw - 320px)/(1440 - 320)));
+	color: #4f4f4f;
+}
+.pr1-text > a, .pr2-text > a, .pr3-text > a{
+	text-decoration: none;
+}
+.pr1-text > p, .pr2-text > p, .pr3-text > p{
+	font-size: calc(11px + 2 * ((100vw - 320px)/(1440 - 320)));
+	padding: 1.5em;
+	color: #828282;
+}
+.team-members{
+	margin-top: calc(30px + 60 * ((100vw - 320px) / (1440 - 320)));
+	text-align: center;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.team-members > h1{
+	margin-left: auto;
+	margin-right: auto;
+	font-size: calc(35px + (5 + 5 * 0.7) * ((100vw - 689px) / (1440 - 689)));
+	font-weight: normal;
+	color: #333333;
+	margin-bottom: calc(15px + 45 * ((100vw - 320px) / (1440 - 320)));
+}
+@media (max-width: 689px){
+	.team-members > h1{
+		font-size: calc(14px + (8 + 8 * 0.7) * ((100vw - 320px) / (689 - 320)));
+	}
+}
+
+img[alt="Dima"], img[alt="Sonya"], img[alt="Misha"], img[alt="Olya"]{
+	margin: auto;
+	padding: calc(10px + 10 * ((100vw - 320px) / (1440 - 320)));
+	width: calc(150px + 50 * ((100vw - 320px) / (1440 - 320)));
+	height: calc(150px + 50 * ((100vw - 320px) / (1440 - 320)));
+}
+.members{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.Dima-text, .Sonya-text, .Misha-text, .Olya-text{
+	margin: auto;
+	width: calc(105px + 205 * ((100vw - 320px) / (1440 - 320)));
+	background-color: #c4c4c4;
+}
+.Dima-text > h3, .Sonya-text > h3, .Misha-text > h3, .Olya-text > h3{
+	padding: 10px 20px;
+	font-size: calc(12px + 3 * ((100vw - 320px)/(1440 - 320)));
+	color: #4f4f4f;
+}
+.Dima-text > p, .Sonya-text > p, .Misha-text > p, .Olya-text > p{
+	font-size: calc(11px + 2 * ((100vw - 320px)/(1440 - 320)));
+	padding: calc(1em + 2 * ((100vw - 320px) / (1440 - 320)));
+	color: #828282;
+}
