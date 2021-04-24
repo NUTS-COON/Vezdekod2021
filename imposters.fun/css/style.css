@@ -274,7 +274,8 @@ img[alt="react"], img[alt="student"]{
 	margin-top: calc(30px + 60 * ((100vw - 320px) / (1440 - 320)));
 	padding: 40px calc(7% + 5 * ((100vw - 689px) / (1440 - 689)));
 	background-image: url(../img/bg_projects.png);
-	background-size: 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 .our-projects > h1{
 	margin-left: auto;
@@ -309,19 +310,41 @@ img[alt="img-pr1"]{
 	font-size: calc(12px + 3 * ((100vw - 320px)/(1440 - 320)));
 	color: #4f4f4f;
 }
-.pr1-text > a, .pr2-text > a, .pr3-text > a{
+.pr1-text > h3 > a, .pr2-text > h3 > a, .pr3-text > h3 > a{
 	text-decoration: none;
+	color: #69188F;
 }
 .pr1-text > p, .pr2-text > p, .pr3-text > p{
 	font-size: calc(11px + 2 * ((100vw - 320px)/(1440 - 320)));
 	padding: 1.5em;
 	color: #828282;
 }
+.projects .slick-list{
+	overflow: hidden;
+}
+.projects .slick-track{
+	display: flex;
+	align-items: flex-start;
+}
+.projects{
+	position: relative;
+}
+.projects .slick-slide{
+	display:flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items:center;
+}
 .team-members{
 	margin-top: calc(30px + 60 * ((100vw - 320px) / (1440 - 320)));
 	text-align: center;
-	margin-left: 2%;
-	margin-right: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+	background-image: url(../img/bg-team.png);
+	background-position: top right;
+	background-size: 75% 100%;
+	background-repeat: no-repeat;
 }
 .team-members > h1{
 	margin-left: auto;
@@ -340,19 +363,22 @@ img[alt="img-pr1"]{
 img[alt="Dima"], img[alt="Sonya"], img[alt="Misha"], img[alt="Olya"]{
 	margin: auto;
 	padding: calc(10px + 10 * ((100vw - 320px) / (1440 - 320)));
-	width: calc(150px + 50 * ((100vw - 320px) / (1440 - 320)));
-	height: calc(150px + 50 * ((100vw - 320px) / (1440 - 320)));
+	padding-bottom: 0;
 }
 .members{
 	display: flex;
 	justify-content: space-around;
-	flex-wrap: wrap;
 }
-
+.Dima, .Sonya, .Misha, .Olya{
+	margin: auto;
+	width: 345px;
+	height: 553px;
+	background-color: #F3F6F8;
+	border-radius: 10px;
+	box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+}
 .Dima-text, .Sonya-text, .Misha-text, .Olya-text{
 	margin: auto;
-	width: calc(105px + 205 * ((100vw - 320px) / (1440 - 320)));
-	background-color: #c4c4c4;
 }
 .Dima-text > h3, .Sonya-text > h3, .Misha-text > h3, .Olya-text > h3{
 	padding: 10px 20px;
@@ -363,4 +389,11 @@ img[alt="Dima"], img[alt="Sonya"], img[alt="Misha"], img[alt="Olya"]{
 	font-size: calc(11px + 2 * ((100vw - 320px)/(1440 - 320)));
 	padding: calc(1em + 2 * ((100vw - 320px) / (1440 - 320)));
 	color: #828282;
+}
+.members .slick-list{
+	overflow: hidden;
+}
+.members .slick-track{
+	display: flex;
+	align-items: flex-start;
 }
