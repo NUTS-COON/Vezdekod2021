@@ -159,14 +159,14 @@ img[alt="logo"]{
 a[href="/"]{
 	padding: 12px 30px;
 }
-a[href="#"] {
+a[href="#next"] {
 	padding: 12px 30px;
 	background-color: #FFA41D;
 }
 .buttons > a:hover{
 	background-color: #69188F;
 }
-a[href="#"]:hover{
+a[href="#next"]:hover{
 	background-color: #F97C14;
 }
 @media(max-width: 689px){
@@ -396,4 +396,50 @@ img[alt="Dima"], img[alt="Sonya"], img[alt="Misha"], img[alt="Olya"]{
 .members .slick-track{
 	display: flex;
 	align-items: flex-start;
+}
+.footer{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-image: url(../img/bg-footer.png);
+	background-position: bottom left;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.footer > p{
+	color: #fff;
+	padding-top: 40px;
+	font-size: calc(15px + 11 * ((100vw - 320px)/(1440 - 320)));
+	padding-bottom: 10px;
+}
+.form{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+}
+.form:first-child{
+	padding-bottom: 10px;
+}
+.form > input{
+	text-align: center;
+	height: 58px;
+}
+input[type="text"]{
+	width: 300px;
+	background: rgba(255, 255, 255, 0.75);
+	border-radius: 50px;
+	margin-bottom: 20px;
+	padding-left: 30px;
+	font-size: calc(13px + 7 * ((100vw - 320px)/(1440 - 320)));
+	text-align: left;
+}
+input[type="submit"]{
+	font-size: calc(10px + 5 * ((100vw - 320px)/(1440 - 320)));
+	width: 200px;
+	background: #FFA41D;
+	border-radius: 110px;
+}
+:focus{
+	outline: -webkit-focus-ring-color auto 0;
 }
