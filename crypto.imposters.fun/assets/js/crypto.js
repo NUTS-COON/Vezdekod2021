@@ -1,10 +1,44 @@
 const app = document.getElementById("crypto")
-function init(){
-    let res = '<tr><th>Тикер</th><th>Цена покупки</th><th>Цена продажи</th><th>Последняя цена</th><th>Объем</th></tr>'
-    window.cryptoData.forEach(function(item) {
-        res = res + '<tr>' + '<td>' + item.symbol + '</td><td>' + item.ask + '</td><td>' + item.bid + '</td><td>' + item.last + '</td><td>' + item.volume + '</td><td>' + '</td>' + '</tr>'
+const generateTableRow = item => {
+
+    let rowContent = '';
+
+    rowContent = '<tr>';
+
+    rowContent += '<td>' + item.symbol + '</td>';
+    rowContent += '<td>' + item.ask + '</td>';
+    rowContent += '<td>' + item.bid + '</td>';
+    rowContent += '<td>' + item.last + '</td>';
+    rowContent += '<td>' + item.volume + '</td>';
+
+    rowContent += '</tr>';
+
+    return rowContent;
+}
+
+const generateTableContent = cryptoData => {
+
+    let tableContent = '';
+
+    const itemHead = {
+        symbol: 'Тикер',
+        ask: 'Цена покупки',
+        bid: 'Цена продажи',
+        last: 'Последняя цена',
+        volume: 'Объем'
+    };
+
+    tableContent += generateTableRow(itemHead);
+
+    cryptoData.forEach(item => {
+        tableContent += generateTableRow(item);
     });
-    app.innerHTML = res
+
+    return tableContent;
+}
+
+function init(){
+    app.innerHTML = generateTableContent(window.cryptoData)
     setTimeout(init,500)
 }
 setTimeout(init,500)
