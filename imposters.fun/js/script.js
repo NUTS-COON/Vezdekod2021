@@ -17,13 +17,11 @@ $(document).ready(function () {
         if ($(window).width() > 689) {
 
             slider.slick({
-                arrows:true,
+                arrows:false,
                 adaptiveHeight:true,
                 speed:500,
                 slidesToShow:2,
             });
-        } else {
-
         }
     };
     sld();
